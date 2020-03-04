@@ -10,7 +10,7 @@ This repository contains solutions to the Java programming questions asked in th
 4. [Character at Odd Position](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Character_At_Odd_Position/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Character_At_Odd_Position/Solution.java))
 5. [Last Character in Every Word](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Last_Character_In_Every_Word/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Last_Character_In_Every_Word/Solution.java))
 6. [Smallest Vowel in a String](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Smallest_Vowel_in_a_String/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Smallest_Vowel_in_a_String/Solution.java))
-
+7. [Reverse of a Number](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Solution.java))
 
 ***
 
@@ -21,7 +21,7 @@ This repository contains solutions to the Java programming questions asked in th
 4. [Sim Match and Sort](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Match_And_Sort/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Match_And_Sort/Solution.java))
 5. [Inventory Replenish](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Inventory_Replenish/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Inventory_Replenish/Solution.java))
 6. [Sim Transfer Circle](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Transfer_Circle/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Transfer_Circle/Solution.java))
-
+7. [Medicine Get Price by Disease](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Medicine_Get_Price_by_Disease/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Medicine_Get_Price_by_Disease/Solution.java))
 
 ***********
 ### Repository Structure
