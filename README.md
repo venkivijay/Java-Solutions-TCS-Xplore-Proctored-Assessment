@@ -10,7 +10,7 @@ This repository contains solutions to the Java programming questions asked in th
 4. [Character at Odd Position](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Character_At_Odd_Position/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Character_At_Odd_Position/Solution.java))
 5. [Last Character in Every Word](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Last_Character_In_Every_Word/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Last_Character_In_Every_Word/Solution.java))
 6. [Smallest Vowel in a String](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Smallest_Vowel_in_a_String/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Smallest_Vowel_in_a_String/Solution.java))
-7. [Reverse of a Number](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Solution.java))
+7. [Reverse of a Number](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Solution1.java)) ([Alternate Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_Number/Solution2.java))
 
 ***
 
