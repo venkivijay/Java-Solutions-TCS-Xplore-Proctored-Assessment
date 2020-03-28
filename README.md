@@ -27,7 +27,7 @@ This repository contains solutions to the Java programming questions asked in th
 ### Repository Structure
   - A question and its answer are collectively stored in a folder with a name giving a precis about the question.
   - The question is saved as a md (markdown) file with name as "question".
-  - The answer is saved as the same name as the folder with a "java" extension.
+  - The answer is saved as a java file with name as solution.
 
 ***********
 
