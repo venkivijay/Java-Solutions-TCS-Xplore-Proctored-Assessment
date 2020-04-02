@@ -23,6 +23,12 @@ This repository contains solutions to the Java programming questions asked in th
 6. [Sim Transfer Circle](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Transfer_Circle/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Protracted-Assessment/blob/master/Sim_Transfer_Circle/Solution.java))
 7. [Medicine Get Price by Disease](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Medicine_Get_Price_by_Disease/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Medicine_Get_Price_by_Disease/Solution.java))
 
+*****
+### Hackathon
+1. [Reverse String](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_String/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_String/Solution1.java)) ([Alternate Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Reverse_String/Solution2.java))
+2. [Unique Characters](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Unique_Characters/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Unique_Characters/Solution.java))
+3. [Data Management](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Device_Management/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Device_Management/Solution.java))
+4. [Data Transmission](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Data_Transmission/Question.md) ([View Solution](https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/blob/master/Data_Transmission/Solution.java))
 ***********
 ### Repository Structure
   - A question and its answer are collectively stored in a folder with a name giving a precis about the question.
