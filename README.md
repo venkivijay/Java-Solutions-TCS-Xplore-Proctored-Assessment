@@ -1,6 +1,9 @@
 # TCS Xplore Assessment Solutions 2020 🤓
 This repository contains solutions to the Java programming questions asked in the TCS Xplore Assessments 2020.
+### Donate 💙
+Show some love and donate
 
+UPI: `venkivijay@upi` [Click to scan](https://user-images.githubusercontent.com/30868354/78326173-5385a380-7597-11ea-942a-af28e2343dd4.jpeg)
 ***********
 
 ### Simple Problems
