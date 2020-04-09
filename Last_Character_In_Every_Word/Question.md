@@ -16,6 +16,6 @@ Ignore all the digits and whitespaces
 ## Explanation
 
 > As the first word `Hey3` has digit in its last position, ignore it.
-> The second word `Java  ` has multiple white spaces after it. But those white spaces dhould be ignored and only the last character should be printed.
-> Likewise, the last character of the word `Learners` shuls be printed.
+> The second word `Java  ` has multiple white spaces after it. But those white spaces should be ignored and only the last character should be printed.
+> Likewise, the last character of the word `Learners` should be printed.
 > Thus, the output `as`.
