@@ -50,6 +50,6 @@ UPI: `venkivijay@upi` [Click to scan](https://user-images.githubusercontent.com/
 ***********
 
 ### Need help?
-  - Struck somewhere?🤔 I'm happy to help you.🤓
+  - Stuck somewhere?🤔 I'm happy to help you.🤓
   - <venkivijay@hotmail.com>
 > All the best for your assessments.💯
