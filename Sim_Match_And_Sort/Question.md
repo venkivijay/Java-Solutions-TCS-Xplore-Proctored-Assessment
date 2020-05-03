@@ -9,7 +9,7 @@ circle - String
 
 Create class Solution and implement static method "matchAndSort" in the Solution class.
 This method will take array of Sim objects, search_circle String and search_rate double as parameters.
-And will return another Sim array where the search_circle matches with the circle parameter of the original Sim array and the search_rate double is greater than the original array of Sim object's ratePerSecond attribute which is also sorted by means of balance attribute in ascending order.
+And will return another Sim array where the search_circle matches with the circle parameter of the original Sim array and the search_rate double is greater than the original array of Sim object's ratePerSecond attribute which is also sorted by means of balance attribute in descending order.
 
 Write necessary getters and setters.
 
