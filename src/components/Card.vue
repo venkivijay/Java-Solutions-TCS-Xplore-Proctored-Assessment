@@ -82,8 +82,7 @@ export default {
     },
     shareCard: function() {
       let slug = this.data.slug;
-      let url = location.origin + "/?search=" + slug;
-      console.log(url);
+      let url = location.href + "?search=" + slug;
       navigator.share({
         title: "TCS Xplore Java Solutions",
         text:
