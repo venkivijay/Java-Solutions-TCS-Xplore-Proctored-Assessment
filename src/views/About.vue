@@ -16,7 +16,7 @@
 
       <div class="support">
         <h2>Support</h2>
-        <p>If you found this useful and got benefited from my work, consider buying me a coffee.</p>
+        <p>If you found my work useful and got benefited from it, consider buying me a coffee.</p>
         <p class="color">UPI ID : venkivijay@upi</p>
         <p>
           <a

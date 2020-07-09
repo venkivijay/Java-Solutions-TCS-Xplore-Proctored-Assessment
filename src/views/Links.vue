@@ -111,6 +111,17 @@ export default {
         this.likes.push(clickedItem);
         localStorage.setItem("likes", JSON.stringify(this.likes));
       }
+    },
+    clearSearch: function(newVal) {
+      console.log(newVal);
+      this.searchString = this.$route.query.search
+        ? this.$route.query.search
+        : "";
+    }
+  },
+  watch: {
+    "$route.query.search"() {
+      this.clearSearch();
     }
   }
 };

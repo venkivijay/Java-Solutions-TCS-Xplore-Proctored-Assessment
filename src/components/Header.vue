@@ -107,6 +107,9 @@ export default {
     handleNav: function() {
       this.showNav = !this.showNav;
     }
+    // clearSearch: function() {
+    //   this.$route.fullPath = "";
+    // }
   },
   created() {
     this.handleMobile();
