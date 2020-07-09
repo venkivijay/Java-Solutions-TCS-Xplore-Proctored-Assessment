@@ -73,13 +73,19 @@ export default {
     filteredData: function() {
       if (this.selectedView == "All") {
         return this.data.filter(item => {
-          return item.slug.toLowerCase().match(this.searchString.toLowerCase());
+          return item.slug
+            .toLowerCase()
+            .replace(/_/g, " ")
+            .match(this.searchString.toLowerCase().replace(/_/g, " "));
         });
       } else {
         return this.data.filter(item => {
           return (
             item.examMode == this.selectedView &&
-            item.slug.toLowerCase().match(this.searchString.toLowerCase())
+            item.slug
+              .toLowerCase()
+              .replace(/_/g, " ")
+              .match(this.searchString.toLowerCase().replace(/_/g, " "))
           );
         });
       }
@@ -174,8 +180,5 @@ section {
       fill: $primary-color;
     }
   }
-}
-
-@media screen and (max-width: 559px) {
 }
 </style>
