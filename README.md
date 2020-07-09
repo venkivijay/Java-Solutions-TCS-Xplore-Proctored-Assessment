@@ -43,3 +43,5 @@ Head over to [our website](https://venkivijay.github.io/Java-Solutions-TCS-Xplor
 - Stuck somewhere? I'm happy to help you.🤓
 - <venkivijay@hotmail.com>
   > All the best for your assessments.💯
+
+##### P.S: Solutions will be posted only after the assessment ends. Please understand that the objective of this whole work is to help you learn (not to copy). Any mail sent regarding the same will be ignored. I would love to help you but not during the assessment.
