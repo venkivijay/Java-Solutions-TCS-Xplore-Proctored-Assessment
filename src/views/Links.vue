@@ -24,7 +24,7 @@
         ref="cardData"
         @liked="addToLikesList"
         v-bind:key="obj.id"
-        v-for="obj in filteredData"
+        v-for="obj in filteredData.slice().reverse()"
         :data="obj"
         :rootURL="rootURL"
         :likes="likes"
