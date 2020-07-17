@@ -1,5 +1,3 @@
-package Inventory_Replenish;
-
 import java.util.Arrays;
 import java.util.Scanner;
 public class Solution {

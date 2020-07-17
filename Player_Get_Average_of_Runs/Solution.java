@@ -1,5 +1,3 @@
-package Player_Get_Average_of_Runs;
-
 import java.util.Arrays;
 import java.util.Scanner;
 public class Solution{

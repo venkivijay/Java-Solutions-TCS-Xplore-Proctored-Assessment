@@ -1,5 +1,3 @@
-package Space_Character_Count;
-
 import java.util.Scanner;
 class Solution{
     public static void main(String[] args){

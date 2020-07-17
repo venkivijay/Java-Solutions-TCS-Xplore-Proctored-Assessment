@@ -1,5 +1,3 @@
-package Medicine_Get_Price_by_Disease;
-
 import java.util.Arrays;
 import java.util.Scanner;
 public class Solution {

@@ -1,5 +1,3 @@
-package Sim_Match_And_Sort;
-
 import java.util.Arrays;
 import java.util.Scanner;
 

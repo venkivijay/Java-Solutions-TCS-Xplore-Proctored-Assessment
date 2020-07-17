@@ -1,5 +1,3 @@
-package Character_At_Odd_Position;
-
 import java.util.Scanner;
 
 class Solution {

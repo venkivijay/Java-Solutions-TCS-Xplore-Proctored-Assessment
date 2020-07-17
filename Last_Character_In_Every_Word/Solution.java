@@ -1,5 +1,3 @@
-package Last_Character_In_Every_Word;
-
 import java.util.Scanner;
 class Solution{
     public static void main(String[] args){

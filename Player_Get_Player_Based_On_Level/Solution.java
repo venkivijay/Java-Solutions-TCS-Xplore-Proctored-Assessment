@@ -1,5 +1,3 @@
-package Player_Get_Player_Based_On_Level;
-
 import java.util.Scanner;
 public class Solution {
    public static void main(String[] args){

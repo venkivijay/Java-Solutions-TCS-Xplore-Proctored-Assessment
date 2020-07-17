@@ -1,5 +1,3 @@
-package Reverse_Number;
-
 import java.util.Scanner;
 public class Solution1{
     public static void main(String[] args) {

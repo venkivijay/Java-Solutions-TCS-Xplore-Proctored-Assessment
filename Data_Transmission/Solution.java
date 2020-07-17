@@ -1,5 +1,3 @@
-package Data_Transmission;
-
 import java.util.Arrays;
 import java.util.Scanner;
 

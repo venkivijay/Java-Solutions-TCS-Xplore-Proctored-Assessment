@@ -1,5 +1,3 @@
-package Associate_For_Given_Technology;
-
 import java.util.Arrays;
 import java.util.Scanner;
 public class Solution {

@@ -1,5 +1,3 @@
-package Movie_Get_Movie_By_Genre;
-
 import java.util.Arrays;
 import java.util.Scanner;
 public class Solution{

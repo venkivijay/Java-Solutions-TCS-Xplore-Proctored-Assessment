@@ -1,5 +1,3 @@
-package Movie_Find_Avg_Budget_By_Director;
-
 import java.util.Scanner;
 public class Solution {
    public static void main(String[] args)

@@ -1,5 +1,3 @@
-package Sim_Transfer_Circle;
-
 import java.util.Arrays;
 import java.util.Scanner;
 

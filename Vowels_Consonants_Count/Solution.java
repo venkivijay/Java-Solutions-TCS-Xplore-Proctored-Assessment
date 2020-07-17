@@ -1,5 +1,3 @@
-package Vowels_Consonants_Count;
-
 import java.util.Scanner;
 
 public class Solution

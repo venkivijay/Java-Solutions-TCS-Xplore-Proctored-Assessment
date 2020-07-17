@@ -1,5 +1,3 @@
-package Reverse_String;
-
 import java.util.Scanner;
 
 public class Solution1 {
