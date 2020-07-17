@@ -200,6 +200,15 @@ export default {
       questionNature: "Complex",
       examMode: "OPA",
     },
+    {
+      slug: "Travel_Agencies",
+      solutionCount: 1,
+      examDate: "2020.07.17",
+      tag: [],
+      id: 23,
+      questionNature: "Complex",
+      examMode: "OPA",
+    },
   ],
   contributors: [
     {
