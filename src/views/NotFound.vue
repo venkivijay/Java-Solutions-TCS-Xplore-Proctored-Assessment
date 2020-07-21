@@ -2,7 +2,7 @@
   <section>
     <div class="notfound">
       <p>OMG!</p>
-      <p>You got lost in the vast space!!!</p>
+      <p>You got lost in the vast space!</p>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 125 512 275">
         <path
