@@ -45,7 +45,7 @@
         <p>
           <small>
             Add your name in the remarks/message field to get featured here.
-            <br />Or mail me
+            <br />Or you can mail me
             <a
               href="mailto:venkivijay@hotmail.com?subject=Supporter&body=Hey Venki, I am supporting you. I have attached the screenshot/reference ID of the payment."
             >venkivijay@hotmail.com</a>
