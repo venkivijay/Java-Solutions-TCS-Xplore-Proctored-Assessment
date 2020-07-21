@@ -4,13 +4,12 @@ on:
     branches:
       - website
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v1
-        with:
-          persist-credentials: false
+        uses: actions/checkout@v2
+
       - run: |
           echo "Actions"
           echo "Triggered"
