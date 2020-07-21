@@ -1,3 +1,5 @@
+<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"> <img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/> </a>
+
 ## Problem Statement
 
 Create class Medicine with below attributes:
@@ -14,7 +16,6 @@ Write necessary getters and setters.
 
 Before calling "getPriceByDisease" method in the main method, read values for four Medicine objects referring the attributes in above sequence along with a String disease.
 Then call the "getPriceByDisease" method and print the result.
-
 
 ## Input
 

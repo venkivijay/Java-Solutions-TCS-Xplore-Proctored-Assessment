@@ -1,3 +1,5 @@
+<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"> <img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/> </a>
+
 ## Problem Statement
 
 Create a class Phone with below attributes:
@@ -21,9 +23,9 @@ getPhoneIdBasedOnOs method:
 This method will take a String parameter os, along with the array of Phone objects.
 The method will return the phone object, if the input String parameter matches with the os attribute of the phone object and its price attribute is greater than or equal to 50000. If any of the conditions are not met, then the method should return null.
 
-Note :  No phone object would have the same value for os attribute.
-        All phone object would have the price greater than 0.
-        All the searches should be case insensitive.
+Note : No phone object would have the same value for os attribute.
+All phone object would have the price greater than 0.
+All the searches should be case insensitive.
 
 These above mentioned static methods should be called from the main method.
 
@@ -35,7 +37,6 @@ then it should print "No phones are available with specified os and price range"
 
 Before calling these static methods in main, use Scanner object to read the values of four Phone objects referring attributes in the above mentioned attribute sequence.
 Next, read the value for brand and os.
-
 
 ## Input
 

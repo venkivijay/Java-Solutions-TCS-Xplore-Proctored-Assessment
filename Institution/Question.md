@@ -1,3 +1,5 @@
+<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"> <img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/> </a>
+
 ## Problem Statement
 
 Create a class Institution with below attributes:
@@ -25,10 +27,9 @@ This method will take a String parameter institutionName, along with the array o
 The method will return the institution object, if the input String parameter matches with the institutionName attribute of the institution object. Before returning the object, the grade should be arrived based on the rating calculation mentioned below. This grade value should be assigned to the object.If any of the above conditions are not met, then the method should return null.
 
 **The grade attribute should be calculated as follows:**
-rating=(noOfStudentsPlaced * 100)/noOfStudentsCleared
+rating=(noOfStudentsPlaced \* 100)/noOfStudentsCleared
 If the rating &gt= 80 , then grade should be 'A'.
 Else, then grade should be 'B'
-
 
 **Note:**
 No institution object would have the same value for institutionName attribute.
@@ -43,11 +44,8 @@ should print "There are no cleared students in this particular location".
 For updateInstitutionGrade method - The main method should print the institutionName and grade of the returned Institution object. The instituationName and grade should be concatinated with :: while printing. eg:- TCS::A, where TCS is the institution name and A is the grade.
 If the returned value is nullthen it should print "No Institute is available with the specified name".
 
-
-
 Before calling these static methods in main, use Scanner object to read the values of four Phone objects referring attributes in the above mentioned attribute sequence (except grade attribute).
 Next, read the value for location and institutionName.
-
 
 ## Input
 

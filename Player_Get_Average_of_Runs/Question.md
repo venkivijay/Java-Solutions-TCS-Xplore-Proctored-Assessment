@@ -1,11 +1,13 @@
+<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"> <img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/> </a>
+
 ## Problem Statement
 
 Create class Player with below attributes:
-id - int 
-name - String 
-iccRank - int 
+id - int
+name - String
+iccRank - int
 matchesPlayed - int
-runsScored - int 
+runsScored - int
 
 Create class Solution and implement static method "findAverageOfRuns" in the Solution class.
 This method will take array of Player objects and a target int as parameters.
@@ -15,7 +17,6 @@ Write necessary getters and setters.
 
 Before calling "findAverageOfRuns" method in the main method, read values for four Player objects referring the attributes in above sequence along with a int target.
 Then call the "findAverageOfRuns" method and write logic in main method to print "Grade A",if the calculated averageRun value is 80 to 100. Else if the averageRun value is between 50 and 79 then print "Grade B". Else print "Grade C"
-
 
 ## Input
 

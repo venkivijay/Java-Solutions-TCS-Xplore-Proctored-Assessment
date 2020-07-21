@@ -1,3 +1,5 @@
+<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"> <img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/> </a>
+
 ## Problem Statement
 
 When data is transmitted over network, it is important to check its validity on the receiving side. This would ensure that data is not altered or corrupted. One of the known approach for validity check is to suffix the data with additional details generated from original data itself.
@@ -12,7 +14,7 @@ Separating two digits each would generate: 12 24 23 31 47 6605 3. There are tota
 
 You need to build a code for this logic. The input will be set of numbers already separated by space.
 
-The submitted code should return the summation of total no. of prime numbers and second largest prime number. 
+The submitted code should return the summation of total no. of prime numbers and second largest prime number.
 
 Consider below example:
 
@@ -20,12 +22,11 @@ Input (input numbers separated by space. The number sequence ends with ; charact
 
 1 0 34 56 76 112 111 17 71 112 113 139;
 
-Answer is: 117 as there are total 4 prime numbers (17, 71, 113, 139) and second largest number is 113 (So in this case, Ans = 4 + 113 = 117) 
+Answer is: 117 as there are total 4 prime numbers (17, 71, 113, 139) and second largest number is 113 (So in this case, Ans = 4 + 113 = 117)
 
 The code should print the final answer as 117 in this case. (Just print the answer value. Do not print anything else).
 
 Consider the limit on input no. as: 0 = Input number = 2,147,483,647. Also, assume that prime number will not be repeated in the input list and each list will have two or more prime numbers.
-
 
 ## Input
 
