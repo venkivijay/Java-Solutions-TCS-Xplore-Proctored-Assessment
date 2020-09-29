@@ -1,6 +1,4 @@
-Java-Solutions-TCS-Xplore-Proctored-Assessment is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"><img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/></a>
-
+🔴 **Not actively maintained - Need maintainers** 🔴
 # TCS Xplore Assessment Solutions 2020
 
 This repository contains solutions to the Java programming questions asked in the TCS Xplore Assessments 2020.
@@ -11,7 +9,7 @@ This repository contains solutions to the Java programming questions asked in th
 
 ## **Major changes**
 
-- All the links are transferred to [our website](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/)
+- All the links are transferred to [this website](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/).
 - With Cool😎 Features like,
   - **Search🔍**
   - **Like❤️**
@@ -21,7 +19,7 @@ This repository contains solutions to the Java programming questions asked in th
 
 ### Support 💙
 
-Head over to [our website](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/about) to show your support.
+ - Head over to [this page](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/about) to show your support.
 
 ---
 

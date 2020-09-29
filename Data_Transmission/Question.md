@@ -1,6 +1,3 @@
-Java-Solutions-TCS-Xplore-Proctored-Assessment is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-<a href="https://tracking.gitads.io/?repo=Java-Solutions-TCS-Xplore-Proctored-Assessment"><img src="https://images.gitads.io/Java-Solutions-TCS-Xplore-Proctored-Assessment" alt="GitAds"/></a>
-
 ## Problem Statement
 
 When data is transmitted over network, it is important to check its validity on the receiving side. This would ensure that data is not altered or corrupted. One of the known approach for validity check is to suffix the data with additional details generated from original data itself.
