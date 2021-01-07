@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.hover\:-translate-y-2px:hover {
+  --transform-translate-y: -2px;
+}
+
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --ternary: #01e2c7;
+  --disabled: #fff;
+}
+
+.theme-light {
+  --primary: #fff;
+  --secondary: #000;
+  --ternary: #01e2c7;
+  --disabled: #fff;
+}
+
+.theme-dark {
+  --primary: #000;
+  --secondary: #fff;
+  --ternary: #000;
+  --disabled: rgba(0, 0, 0, 0.5);
+}
