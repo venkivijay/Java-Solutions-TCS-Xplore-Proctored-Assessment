@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/toast": "^3.3.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-fuse": "^2.2.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

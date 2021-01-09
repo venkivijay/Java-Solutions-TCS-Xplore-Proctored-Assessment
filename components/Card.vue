@@ -2,19 +2,29 @@
   <div class="mx-3 mt-3 px-6 pt-6 border border-theme-secondary rounded-lg">
     <!-- Section 1 of card (Title) -->
     <div class="text-center relative">
-      <p>{{ item.slug }}</p>
+      <p>{{ getTitle(item.slug) }}</p>
     </div>
     <!-- Section 2 of card (Question and Solution Links) -->
     <div class="flex justify-around m-5">
       <div>
-        <button class="border border-theme-secondary rounded-lg p-1">
+        <a
+          class="border border-theme-secondary rounded-lg p-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          :href="getQuestion"
+        >
           Question
-        </button>
+        </a>
       </div>
       <div>
-        <button class="border border-theme-secondary rounded-lg p-1">
+        <a
+          class="border border-theme-secondary rounded-lg p-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          :href="getSolution"
+        >
           Solution
-        </button>
+        </a>
       </div>
     </div>
     <!-- Section 3 of card (Details and Like/Share) -->
@@ -109,6 +119,7 @@
         <!-- Share or Copy Card Link Button -->
         <button
           :title="webShareAPISupported ? 'Share this card' : 'Copy card link'"
+          @click="handleCardShare"
         >
           <!-- Share Icon -->
           <svg
@@ -161,24 +172,62 @@ export default {
       required: true,
     },
   },
-  // data() {
-  //   return {
-  //     liked: this.$store.getters.isLiked(this.item.slug),
-  //   };
-  // },
+  data() {
+    return {
+      rootURL:
+        'https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/tree/master/',
+    };
+  },
   computed: {
     theme() {
       return this.$store.state.theme;
     },
     webShareAPISupported() {
-      return process.client ? navigator.share : false;
+      return navigator.share;
     },
     isLiked() {
       return this.$store.getters.isLiked(this.item.slug);
     },
+    getQuestion() {
+      return `${this.rootURL}${this.item.slug}/Question.md`;
+    },
+    getSolution() {
+      return `${this.rootURL}${this.item.slug}/Solution.java`;
+    },
   },
   methods: {
     ...mapMutations(['handleLike']),
+    getTitle(slug) {
+      return slug.replace(/_/g, ' ');
+    },
+    handleCardShare() {
+      if (this.webShareAPISupported) {
+        // share
+        navigator.share({
+          title: 'Xplore',
+          text:
+            'TCS Xplore Java Solution for\nProblem Name: ' +
+            this.getTitle(this.item.slug) +
+            '\nClick the link 👇 to view question and solutions\n',
+          url: `https://xplore.venkivijay.com/?card=${this.item.slug}`,
+        });
+      } else {
+        // copy
+        const textarea = document.createElement('textarea');
+        textarea.value = `https://xplore.venkivijay.com/?card=${this.item.slug}`;
+        document.body.appendChild(textarea);
+        const selection = document.getSelection();
+        textarea.select();
+        document.execCommand('copy');
+        selection.removeAllRanges();
+        document.body.removeChild(textarea);
+        this.$toast.show('Card link copied to clipboard!', {
+          position: 'bottom-right',
+          duration: 2500,
+          type: 'success',
+        });
+      }
+    },
   },
 };
 </script>

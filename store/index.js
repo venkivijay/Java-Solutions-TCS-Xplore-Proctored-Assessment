@@ -14,9 +14,6 @@ export const getters = {
 export const mutations = {
   // populate store values with localstorage
   initializeStore(state) {
-    if (process.server) {
-      return;
-    }
     if (localStorage.getItem('state')) {
       try {
         // if localstorage is available and healthy

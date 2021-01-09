@@ -3,5 +3,35 @@
   "vetur.validation.template": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "colorize.languages": ["javascript", "json", "vue"],
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE:",
+      "color": "white",
+      "backgroundColor": "#258200",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "DEBUG:",
+      "color": "#000"
+    },
+    {
+      "text": "TODO:",
+      "color": "red",
+      "border": "1px solid red",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)",
+      "isWholeLine": true
+    }
+  ],
+  "todohighlight.defaultStyle": {
+    //   "color": "red",
+    //   "backgroundColor": "#ffab00",
+    //   "overviewRulerColor": "#ffab00",
+    //   "cursor": "pointer",
+    //   "border": "1px solid #eee",
+    //   "borderRadius": "2px",
+    "isWholeLine": false
   }
 }

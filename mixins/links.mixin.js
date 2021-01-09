@@ -1,8 +1,6 @@
 export default {
   data() {
     return {
-      rootURL:
-        'https://github.com/venkivijay/Java-Solutions-TCS-Xplore-Proctored-Assessment/tree/master/',
       qa: [
         {
           slug: 'Perfect_Square',
@@ -10,7 +8,7 @@ export default {
           examDate: '2019.12.17',
           tag: [],
           id: 1,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -19,7 +17,7 @@ export default {
           examDate: '2019.12.17',
           tag: [],
           id: 2,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -28,7 +26,7 @@ export default {
           examDate: '2019.12.28',
           tag: [],
           id: 3,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -37,7 +35,7 @@ export default {
           examDate: '2019.12.28',
           tag: [],
           id: 4,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -46,7 +44,7 @@ export default {
           examDate: '2020.01.15',
           tag: [],
           id: 5,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -55,7 +53,7 @@ export default {
           examDate: '2020.01.15',
           tag: [],
           id: 6,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -64,7 +62,7 @@ export default {
           examDate: '2020.01.25',
           tag: [],
           id: 7,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -73,7 +71,7 @@ export default {
           examDate: '2020.01.25',
           tag: [],
           id: 8,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -82,7 +80,7 @@ export default {
           examDate: '2020.02.10',
           tag: [],
           id: 9,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -91,7 +89,7 @@ export default {
           examDate: '2020.02.10',
           tag: [],
           id: 10,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -100,7 +98,7 @@ export default {
           examDate: '2020.02.13',
           tag: [],
           id: 11,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -109,7 +107,7 @@ export default {
           examDate: '2020.03.02',
           tag: [],
           id: 12,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'PA',
         },
         {
@@ -118,7 +116,7 @@ export default {
           examDate: '2020.03.02',
           tag: [],
           id: 13,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'PA',
         },
         {
@@ -127,7 +125,7 @@ export default {
           examDate: '2020.04.02',
           tag: [],
           id: 14,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'Hackathon',
         },
         {
@@ -136,7 +134,7 @@ export default {
           examDate: '2020.04.02',
           tag: [],
           id: 15,
-          questionNature: 'Simple',
+          questionNature: 'Easy',
           examMode: 'Hackathon',
         },
         {
@@ -145,7 +143,7 @@ export default {
           examDate: '2020.04.02',
           tag: [],
           id: 16,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'Hackathon',
         },
         {
@@ -154,7 +152,7 @@ export default {
           examDate: '2020.04.02',
           tag: [],
           id: 17,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'Hackathon',
         },
         {
@@ -163,7 +161,7 @@ export default {
           examDate: '2020.04.17',
           tag: [],
           id: 18,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'Hackathon',
         },
         {
@@ -172,7 +170,7 @@ export default {
           examDate: '2020.05.08',
           tag: [],
           id: 19,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'OPA',
         },
         {
@@ -181,7 +179,7 @@ export default {
           examDate: '2020.06.05',
           tag: [],
           id: 20,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'OPA',
         },
         {
@@ -190,7 +188,7 @@ export default {
           examDate: '2020.06.19',
           tag: [],
           id: 21,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'OPA',
         },
         {
@@ -199,7 +197,7 @@ export default {
           examDate: '2020.07.03',
           tag: [],
           id: 22,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'OPA',
         },
         {
@@ -208,24 +206,10 @@ export default {
           examDate: '2020.07.17',
           tag: [],
           id: 23,
-          questionNature: 'Complex',
+          questionNature: 'Hard',
           examMode: 'OPA',
         },
       ],
     };
-  },
-  computed: {
-    getQuestion(id) {
-      return `${this.rootURL}${this.qa[id - 1].slug}/Question.md`;
-    },
-    getSolutions(id) {
-      const solutions = [];
-      for (let i = 0; i < this.qa[id - 1].solutionCount; i++) {
-        solutions.push(
-          `${this.rootURL}${this.qa[id - 1].slug}/Solution${i + 1}.md`,
-        );
-      }
-      return solutions;
-    },
   },
 };

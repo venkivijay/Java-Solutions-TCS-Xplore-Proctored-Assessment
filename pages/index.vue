@@ -1,8 +1,9 @@
 <template>
-  <main class="w-full max-w-screen-md mx-auto">
+  <main class="w-full max-w-screen-lg mx-auto">
     <section
       class="sticky top-0 z-10 flex flex-col justify-center pt-3 -mt-3 space-y-2 bg-theme-primary"
     >
+      <!-- Search Bar -->
       <div class="relative">
         <input
           v-model="searchTerm"
@@ -38,7 +39,9 @@
           </svg>
         </div>
       </div>
+      <!-- Filter and Sort Bar -->
       <div
+        v-if="isHomePage"
         class="flex flex-wrap items-center justify-between px-5 py-4 rounded bg-theme-secondary text-theme-primary"
       >
         <div class="flex mr-auto space-x-3">
@@ -216,11 +219,16 @@
     <transition-group
       name="shuffle"
       tag="section"
-      class="grid gap-1 pt-5"
+      class="flex flex-wrap justify-center"
       aria-live="polite"
-      style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
     >
-      <Card v-for="item in manipulatedQA" :key="item.id" :item="item" />
+      <Card
+        v-for="item in manipulatedQA"
+        :key="item.id"
+        :item="item"
+        class="flex-grow-0 flex-shrink"
+        style="flex-basis: 300px"
+      />
     </transition-group>
   </main>
 </template>
@@ -228,18 +236,34 @@
 <script>
 import Card from '@/components/Card';
 import StaticData from '@/mixins/links.mixin';
+
 export default {
   name: 'Index',
   components: { Card },
   mixins: [StaticData],
   data() {
     return {
-      searchTerm: '',
+      searchTerm: this.$route.query.card ? this.$route.query.card : '',
       nameSortOrder: 0,
       dateSortOrder: 0,
       filter: 'All',
       manipulatedQA: [],
     };
+  },
+  computed: {
+    getFilteredQA() {
+      const immutableQA = [...this.qa];
+      if (this.filter === 'All') {
+        return immutableQA;
+      } else {
+        return immutableQA.filter((item) => {
+          return item.examMode === this.filter;
+        });
+      }
+    },
+    isHomePage() {
+      return this.$route.fullPath === '/';
+    },
   },
   watch: {
     filter: [
@@ -249,6 +273,11 @@ export default {
       },
       'resetSortOrder',
     ],
+    searchTerm: { handler: 'searchQA' },
+    '$route.query.card': {
+      handler: 'handleCardEndPoint',
+      immediate: true,
+    },
   },
   methods: {
     // Keeps the Name sort order among 0(no sort),1(ascend),2(desend)
@@ -274,155 +303,217 @@ export default {
     // FilterQA will set the manipulatedQA to the actual qa array if the filter is set to 'All'
     // Else it will set the manipulatedQA to an array that has the exact matched qa's only
     filterQA() {
-      const immutableQA = [...this.qa];
-      if (this.filter === 'All') {
-        this.manipulatedQA = immutableQA;
-      } else {
-        this.manipulatedQA = immutableQA.filter((item) => {
-          return item.examMode === this.filter;
-        });
+      if (!this.$route.query.card) {
+        const immutableQA = [...this.qa];
+        if (this.filter === 'All') {
+          this.manipulatedQA = immutableQA;
+        } else {
+          this.manipulatedQA = immutableQA.filter((item) => {
+            return item.examMode === this.filter;
+          });
+        }
       }
     },
-    // sortQA takes in sortBy(ie.,name or date) and order(ie., 0-none,1-ascend,2-desend)
+    // sortQA takes in sortBy(ie.,name or date) and order(ie., 0-none,1-ascending,2-descending)
     // sorts manipulatedQA based on the input parameters
-    sortQA(sortBy, order) {
-      this.manipulatedQA.sort((a, b) => {
-        if (sortBy === 'name') {
+    sortQA(
+      sortBy = this.nameSortOrder ? 'name' : 'date',
+      order = this.nameSortOrder ? this.nameSortOrder : this.dateSortOrder,
+    ) {
+      if (sortBy === 'name' && this.nameSortOrder !== 0) {
+        this.manipulatedQA.sort((a, b) => {
           a = a.slug.toLowerCase().replace(/_/g, '');
           b = b.slug.toLowerCase().replace(/_/g, '');
-        } else {
+          return order === 1
+            ? a < b
+              ? -1
+              : a > b
+              ? 1
+              : 0
+            : order === 2
+            ? a < b
+              ? 1
+              : a > b
+              ? -1
+              : 0
+            : '';
+        });
+      } else if (sortBy === 'date' && this.dateSortOrder !== 0) {
+        this.manipulatedQA.sort((a, b) => {
           a = new Date(a.examDate).toISOString();
           b = new Date(b.examDate).toISOString();
-        }
-        return order === 1
-          ? a < b
-            ? -1
-            : a > b
-            ? 1
-            : 0
-          : order === 2
-          ? a < b
-            ? 1
-            : a > b
-            ? -1
-            : 0
-          : this.filterQA();
-      });
+          return order === 1
+            ? a < b
+              ? -1
+              : a > b
+              ? 1
+              : 0
+            : order === 2
+            ? a < b
+              ? 1
+              : a > b
+              ? -1
+              : 0
+            : '';
+        });
+      } else {
+        this.filterQA();
+      }
     },
     // clears all sort options
     resetSortOrder() {
-      this.nameSortOrder = 0;
-      this.dateSortOrder = 0;
+      if (this.nameSortOrder !== 0 && this.dateSortOrder !== 0) {
+        this.nameSortOrder = 0;
+        this.dateSortOrder = 0;
+      }
+    },
+    searchQA() {
+      // at this stage user haven't touched the search bar
+      if (this.searchTerm === this.$route.query.card) {
+        this.$search(this.searchTerm, this.qa, {
+          keys: ['slug'],
+          threshold: 0.0,
+        }).then((result) => {
+          this.manipulatedQA = result;
+        });
+      } else {
+        // at this stage user must have made change in search box
+        // so force route to / and clear the card query to implement normal search
+        if (this.$route.fullPath !== '/') {
+          this.$router.push({
+            path: '/',
+          });
+          this.$route.query.card = null;
+        }
+        if (this.searchTerm) {
+          this.$search(this.searchTerm, this.getFilteredQA, {
+            keys: ['slug', 'questionNature'],
+          }).then((results) => {
+            this.manipulatedQA = results;
+          });
+        } else {
+          this.filterQA();
+          this.sortQA();
+        }
+      }
+    },
+    handleCardEndPoint(value) {
+      if (value) {
+        this.searchQA();
+      }
     },
   },
 };
 </script>
 
 <style lang="postcss">
-input[type='range'] {
-  background: transparent;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
-}
-input[type='range']:focus {
-  outline: none;
-}
-input[type='range']::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 1px;
-  cursor: pointer;
-  background: var(--primary);
-}
-input[type='range']::-webkit-slider-thumb {
-  height: 18px;
-  width: 18px;
-  border-radius: 9px;
-  background: #01e2c7;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8.5px;
-}
-input[type='range']:focus::-webkit-slider-runnable-track {
-  background: var(--primary);
-}
-input[type='range']::-moz-range-track {
-  width: 100%;
-  height: 1px;
-  cursor: pointer;
-  background: var(--primary);
-  border-radius: 0;
-}
-input[type='range']::-moz-range-thumb {
-  height: 18px;
-  width: 18px;
-  border-radius: 9px;
-  background: #01e2c7;
-  cursor: pointer;
-}
-input[type='range']::-ms-track {
-  width: 100%;
-  height: 1px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-input[type='range']::-ms-fill-lower {
-  background: var(--primary);
-}
-input[type='range']::-ms-fill-upper {
-  background: var(--primary);
-}
-input[type='range']::-ms-thumb {
-  margin-top: 1px;
-  height: 18px;
-  width: 18px;
-  border-radius: 9px;
-  background: #01e2c7;
-  cursor: pointer;
-}
-input[type='range']:focus::-ms-fill-lower {
-  background: var(--primary);
-}
-input[type='range']:focus::-ms-fill-upper {
-  background: var(--primary);
-}
-.shuffle-move {
-  transition: transform 0.5s;
-}
-
-.shuffle,
-.shuffle-leave-active {
-  transition: all 0.5s;
-}
-.shuffle-enter,
-.shuffle-leave-to {
-  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-@keyframes shake {
+@keyframes "shake" {
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
   }
-
   20%,
   80% {
     transform: translate3d(2px, 0, 0);
   }
-
   30%,
   50%,
   70% {
     transform: translate3d(-4px, 0, 0);
   }
-
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+input[type='range'] {
+  background: transparent;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: var(--primary);
+  }
+  &::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background: #01e2c7;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8.5px;
+  }
+  &::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: 0;
+  }
+  &::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background: #01e2c7;
+    cursor: pointer;
+  }
+  &::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background: var(--primary);
+  }
+  &::-ms-fill-upper {
+    background: var(--primary);
+  }
+  &::-ms-thumb {
+    margin-top: 1px;
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background: #01e2c7;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    &::-webkit-slider-runnable-track {
+      background: var(--primary);
+    }
+    &::-ms-fill-lower {
+      background: var(--primary);
+    }
+    &::-ms-fill-upper {
+      background: var(--primary);
+    }
+  }
+}
+.shuffle-move {
+  transition: transform 0.5s;
+}
+.shuffle {
+  transition: all 0.5s;
+}
+.shuffle-leave-active {
+  transition: all 0.5s;
+}
+.shuffle-enter {
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.shuffle-leave-to {
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 </style>
