@@ -12,7 +12,7 @@ And will return another array of Movie objects where the searchGenre String matc
 
 Write necessary getters and setters.
 
-Before calling "getMovieByGenre" method in the main method, read values for five Movie objects referring the attributes in above sequence along with a String searchGenre.
+Before calling "getMovieByGenre" method in the main method, read values for four Movie objects referring the attributes in above sequence along with a String searchGenre.
 Then call the "getMovieByGenre" method and write logic in main method to print "High Budget Movie",if the movie budget attribute is greater than 80000000 else print "Low Budget Movie".
 
 ## Input
