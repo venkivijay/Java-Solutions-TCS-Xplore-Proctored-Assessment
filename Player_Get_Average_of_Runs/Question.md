@@ -9,7 +9,7 @@ runsScored - int
 
 Create class Solution and implement static method "findAverageOfRuns" in the Solution class.
 This method will take array of Player objects and a target int as parameters.
-And will return another double array where the target int is lesser than or equal to the original array of Player object's matchesPlayed attribute.
+And will return another double array where the target int is lesser than or equal to the original array of Player object's matchesPlayed attribute and contains the average run scored by each player satisfying above condition.
 
 Write necessary getters and setters.
 
