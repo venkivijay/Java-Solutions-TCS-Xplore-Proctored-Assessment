@@ -13,7 +13,7 @@ And will return another Sim array where the circle1 matches with the circle para
 
 Write necessary getters and setters.
 
-Before calling "transferCircle" method in the main method, read values for four Sim objects referring the attributes in above sequence along with a String circlee1 and circle2.
+Before calling "transferCircle" method in the main method, read values for five Sim objects referring the attributes in above sequence along with a String circlee1 and circle2.
 Then call the "transferCircle" method and write logic in main method to print all the attributes of the result obtained.
 
 ## Input
