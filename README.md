@@ -1,15 +1,16 @@
-🔴 **Not actively maintained - Need maintainers** 🔴
+🔴 **Not actively maintained - Need maintainers** 🔴<br>
+✨ **Feel free to contribute** ✨
 # TCS Xplore Assessment Solutions 2020
 
 This repository contains solutions to the Java programming questions asked in the TCS Xplore Assessments 2020.
 
-##### Maintained by [venkivijay](https://github.com/venkivijay), with the only objective of helping others.
+##### Maintained by [venkivijay](https://www.venkivijay.com), with the only objective of helping others.
 
 ---
 
 ## **Major changes**
 
-- All the links are transferred to [this website](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/).
+- All the links are transferred to [this website](https://xplore.venkivijay.com/).
 - With Cool😎 Features like,
   - **Search🔍**
   - **Like❤️**
@@ -19,7 +20,7 @@ This repository contains solutions to the Java programming questions asked in th
 
 ### Support 💙
 
- - Head over to [this page](https://venkivijay.github.io/Java-Solutions-TCS-Xplore-Proctored-Assessment/#/about) to show your support.
+ - Head over to [this page](https://www.buymeacoffee.com/venkivijay) to show your support.
 
 ---
 
@@ -42,7 +43,7 @@ This repository contains solutions to the Java programming questions asked in th
 ### Need help? 🤗
 
 - Stuck somewhere? I'm happy to help you.🤓
-- <venkivijay@hotmail.com>
+- [Grab a link!](https://links.venkivijay.com)
   > All the best for your assessments.💯
 
 ##### P.S: Solutions will be posted only after the assessment ends. Please understand that the objective of this whole work is to help you learn (not to copy). Any mail sent regarding the same will be ignored. I would love to help you but not during the assessment.
