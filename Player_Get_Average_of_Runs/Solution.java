@@ -11,7 +11,7 @@ public class Solution{
         sc.close();
         double[] averageRun = findAverageOfRuns(players,target);
         for(int i = 0;i < averageRun.length;i++){
-            if(averageRun[i] >= 80 && averageRun[i] <= 100)
+            if(averageRun[i] >= 80)
                 System.out.println("Grade A");
             else if(averageRun[i] >= 50 && averageRun[i] <= 79)
                 System.out.println("Grade B");
