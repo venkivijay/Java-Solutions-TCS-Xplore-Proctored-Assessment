@@ -7,7 +7,7 @@ class Solution {
         s.close();
         char[] result = input.toCharArray();
         for(int i=1;i<result.length;i=i+2){
-            System.out.print(result[i]);
+            System.out.print(result[i]); //will print the result
         }
     }
 }
