@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Solution{
+class Solution {
     public static void main(String args[]){
         Scanner str=new Scanner(System.in);
         String word=str.nextLine();

@@ -6,7 +6,10 @@ public class Solution1 {
         String input = sc.nextLine();
         sc.close();
         input = input.toLowerCase();
-        StringBuffer inputSB = new StringBuffer(input);
-        System.out.print(inputSB.reverse());
+        char[] inputArray = input.toCharArray();
+        for (int i = inputArray.length - 1; i >= 0; i--) {
+            System.out.print(inputArray[i]);
+        }
+
     }
 }

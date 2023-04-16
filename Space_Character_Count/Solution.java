@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Solution{
+class Solution {
     public static void main(String[] args){
         int space_count=0,char_count=0;
         Scanner s=new Scanner(System.in);
