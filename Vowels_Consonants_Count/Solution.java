@@ -8,11 +8,17 @@ public class Solution {
         input = input.toLowerCase();
         int vowelCount = 0, consonantCount = 0;
         for(int i=0;i<input.length();i++){
-            if(input.charAt(i)>='a' && input.charAt(i)<='z'){
-                if(input.charAt(i)=='a' || input.charAt(i)=='e' || input.charAt(i)=='i' || input.charAt(i)=='o' || input.charAt(i)=='u')
-                    vowelCount += 1;
-                else
-                    consonantCount += 1;
+            if(input.charAt(i) >= 'a' && input.charAt(i) <= 'z'){
+                switch(input.charAt(i)) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        ++vowelCount;
+                    default:
+                        ++consonantCount;
+                }
             }
         }
         System.out.println("Vowels count - "+vowelCount);
